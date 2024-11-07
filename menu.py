@@ -1,10 +1,7 @@
 import pygame
 
-def menu (screen):
+def menu (inicio, salir,screen):
     fuente = pygame.font.Font(None, 100)
-
-    inicio=pygame.Rect(800, 350, 460,80)
-    salir=pygame.Rect(900, 450, 200,80)
 
     pygame.draw.rect(screen, (255, 255, 255), inicio, 0 )
     pygame.draw.rect(screen, (255, 255, 255), salir, 0 )
