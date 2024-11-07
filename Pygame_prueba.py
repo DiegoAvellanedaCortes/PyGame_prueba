@@ -27,7 +27,7 @@ while running:
             controles_Mov(event)
         if event.type==pygame.MOUSEBUTTONDOWN and event.button==1:
             if inicio.collidepoint(pygame.mouse.get_pos()):
-                print("Llego")
+                menuFondo=False
                 screen.blit(fondoJuego, [0,0])
 
             elif salir.collidepoint(pygame.mouse.get_pos()):
@@ -35,15 +35,14 @@ while running:
 
     if menuFondo==True:
         screen.blit(imgInicio, [0,0])
-    else:
-        screen.fill("white")
+        menu(inicio, salir, screen)
+
     
 
     pygame.display.set_caption("Juego Mario") #Nombre de la ventana
 
     pygame.font.init()
 
-    menu(inicio,salir,screen)
 
     pygame.display.flip()
 
